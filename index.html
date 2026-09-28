@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Emotion Analyzer</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+
+<body>
+
+    <div class="container">
+
+        <div class="card">
+
+            <div class="header">
+
+                <div class="icon">
+                    🧠
+                </div>
+
+                <h1>
+                    Emotion Analyzer
+                </h1>
+
+                <p class="subtitle">
+                    Analyze the emotion behind your text
+                    using Machine Learning and NLP
+                </p>
+
+            </div>
+
+
+            <!-- INPUT SECTION -->
+
+            <div class="input-section">
+
+                <label for="textInput">
+                    Enter your text
+                </label>
+
+                <textarea
+                    id="textInput"
+                    placeholder="Type something like: I am feeling really happy today..."
+                ></textarea>
+
+                <button
+                    id="analyzeButton"
+                    onclick="analyzeEmotion()">
+
+                    Analyze Emotion
+
+                </button>
+
+            </div>
+
+
+            <!-- LOADING -->
+
+            <div
+                id="loading"
+                class="loading hidden">
+
+                <div class="spinner"></div>
+
+                <p>
+                    Analyzing your text...
+                </p>
+
+            </div>
+
+
+            <!-- ERROR -->
+
+            <div
+                id="error"
+                class="error hidden">
+
+            </div>
+
+
+            <!-- RESULT -->
+
+            <div
+                id="result"
+                class="result hidden">
+
+                <h2>
+                    Detected Emotion
+                </h2>
+
+
+                <div
+                    id="emotion"
+                    class="emotion">
+
+                </div>
+
+
+                <!-- CONFIDENCE -->
+
+                <div class="confidence-section">
+
+                    <div class="confidence-header">
+
+                        <span>
+                            Confidence
+                        </span>
+
+                        <span>
+                            <strong id="confidence">
+                                0
+                            </strong>%
+                        </span>
+
+                    </div>
+
+
+                    <div class="progress">
+
+                        <div
+                            id="progressBar"
+                            class="progress-bar">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PROCESSED TEXT -->
+
+                <div class="processed">
+
+                    <h3>
+                        Processed Text
+                    </h3>
+
+                    <p id="cleanedText">
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- INFORMATION -->
+
+            <div class="info">
+
+                <div>
+                    🤖
+                    <span>
+                        Machine Learning
+                    </span>
+                </div>
+
+                <div>
+                    📝
+                    <span>
+                        NLP
+                    </span>
+                </div>
+
+                <div>
+                    📊
+                    <span>
+                        TF-IDF
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

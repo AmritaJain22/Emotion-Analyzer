@@ -1,0 +1,579 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef2ff,
+            #f5f3ff,
+            #ecfeff
+        );
+
+    color: #1e293b;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 30px;
+
+}
+
+
+/* =====================================================
+   MAIN CONTAINER
+   ===================================================== */
+
+.container {
+
+    width: 100%;
+
+    max-width: 750px;
+
+}
+
+
+/* =====================================================
+   CARD
+   ===================================================== */
+
+.card {
+
+    background: rgba(
+        255,
+        255,
+        255,
+        0.95
+    );
+
+    border-radius: 25px;
+
+    padding: 45px;
+
+    box-shadow:
+        0 20px 60px
+        rgba(
+            0,
+            0,
+            0,
+            0.10
+        );
+
+    border: 1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.8
+        );
+
+}
+
+
+/* =====================================================
+   HEADER
+   ===================================================== */
+
+.header {
+
+    text-align: center;
+
+    margin-bottom: 35px;
+
+}
+
+
+.icon {
+
+    width: 70px;
+
+    height: 70px;
+
+    margin: 0 auto 15px;
+
+    border-radius: 20px;
+
+    background: #eef2ff;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 35px;
+
+}
+
+
+h1 {
+
+    font-size: 36px;
+
+    margin-bottom: 10px;
+
+    color: #1e293b;
+
+}
+
+
+.subtitle {
+
+    color: #64748b;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+
+}
+
+
+/* =====================================================
+   INPUT
+   ===================================================== */
+
+.input-section label {
+
+    display: block;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+
+    color: #334155;
+
+}
+
+
+textarea {
+
+    width: 100%;
+
+    min-height: 180px;
+
+    resize: vertical;
+
+    border: 2px solid #e2e8f0;
+
+    border-radius: 15px;
+
+    padding: 18px;
+
+    font-size: 16px;
+
+    font-family: inherit;
+
+    outline: none;
+
+    color: #1e293b;
+
+    background: #ffffff;
+
+    transition: 0.3s;
+
+}
+
+
+textarea:focus {
+
+    border-color: #6366f1;
+
+    box-shadow:
+        0 0 0 4px
+        rgba(
+            99,
+            102,
+            241,
+            0.10
+        );
+
+}
+
+
+textarea::placeholder {
+
+    color: #94a3b8;
+
+}
+
+
+/* =====================================================
+   BUTTON
+   ===================================================== */
+
+button {
+
+    width: 100%;
+
+    margin-top: 18px;
+
+    padding: 16px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    background: #6366f1;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+
+}
+
+
+button:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(
+            99,
+            102,
+            241,
+            0.25
+        );
+
+}
+
+
+button:active {
+
+    transform: translateY(0);
+
+}
+
+
+/* =====================================================
+   LOADING
+   ===================================================== */
+
+.loading {
+
+    text-align: center;
+
+    margin-top: 25px;
+
+    color: #6366f1;
+
+}
+
+
+.spinner {
+
+    width: 35px;
+
+    height: 35px;
+
+    border: 4px solid #e2e8f0;
+
+    border-top: 4px solid #6366f1;
+
+    border-radius: 50%;
+
+    margin: 0 auto 10px;
+
+    animation: spin 1s linear infinite;
+
+}
+
+
+@keyframes spin {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* =====================================================
+   RESULT
+   ===================================================== */
+
+.result {
+
+    margin-top: 30px;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e2e8f0;
+
+    text-align: center;
+
+}
+
+
+.result h2 {
+
+    font-size: 20px;
+
+    color: #475569;
+
+    margin-bottom: 15px;
+
+}
+
+
+/* =====================================================
+   EMOTION
+   ===================================================== */
+
+.emotion {
+
+    font-size: 38px;
+
+    font-weight: bold;
+
+    text-transform: capitalize;
+
+    color: #6366f1;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* =====================================================
+   CONFIDENCE
+   ===================================================== */
+
+.confidence-section {
+
+    text-align: left;
+
+}
+
+
+.confidence-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+
+    color: #475569;
+
+}
+
+
+.progress {
+
+    width: 100%;
+
+    height: 12px;
+
+    background: #e2e8f0;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+}
+
+
+.progress-bar {
+
+    height: 100%;
+
+    width: 0%;
+
+    background: #6366f1;
+
+    border-radius: 20px;
+
+    transition:
+        width 0.8s ease;
+
+}
+
+
+/* =====================================================
+   PROCESSED TEXT
+   ===================================================== */
+
+.processed {
+
+    margin-top: 25px;
+
+    padding: 18px;
+
+    border-radius: 12px;
+
+    background: white;
+
+    text-align: left;
+
+}
+
+
+.processed h3 {
+
+    font-size: 15px;
+
+    margin-bottom: 8px;
+
+    color: #334155;
+
+}
+
+
+.processed p {
+
+    color: #64748b;
+
+    line-height: 1.6;
+
+    word-wrap: break-word;
+
+}
+
+
+/* =====================================================
+   ERROR
+   ===================================================== */
+
+.error {
+
+    margin-top: 20px;
+
+    padding: 15px;
+
+    border-radius: 12px;
+
+    background: #fee2e2;
+
+    color: #991b1b;
+
+    text-align: center;
+
+    font-size: 14px;
+
+}
+
+
+/* =====================================================
+   INFO
+   ===================================================== */
+
+.info {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    margin-top: 30px;
+
+    color: #64748b;
+
+    font-size: 14px;
+
+}
+
+
+.info div {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+}
+
+
+/* =====================================================
+   HIDDEN
+   ===================================================== */
+
+.hidden {
+
+    display: none;
+
+}
+
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+    body {
+
+        padding: 15px;
+
+    }
+
+
+    .card {
+
+        padding: 25px;
+
+        border-radius: 20px;
+
+    }
+
+
+    h1 {
+
+        font-size: 28px;
+
+    }
+
+
+    .subtitle {
+
+        font-size: 14px;
+
+    }
+
+
+    .emotion {
+
+        font-size: 30px;
+
+    }
+
+
+    .info {
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 10px;
+
+    }
+
+}
