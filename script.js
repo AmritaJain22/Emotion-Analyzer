@@ -76,7 +76,7 @@ async function analyzeEmotion() {
 
         const response =
             await fetch(
-                "/predict",
+                "https://emotion-analyzer-nw3m.onrender.com/predict",
                 {
 
                     method: "POST",
